@@ -14,7 +14,7 @@ export function CheckoutPage() {
         <div className="checkout-grid">
           <div className="order-summary">
             <div className="cart-item-container">
-              <div className="delivery-date">Delivery date: Tuesday, June 21</div>
+              <div className="delivery-date">Delivery date: Tuesday, June 21.</div>
 
               <div className="cart-item-details-grid">
                 <img
