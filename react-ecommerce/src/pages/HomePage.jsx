@@ -5,6 +5,7 @@ import "./HomePage.css";
 
 export function HomePage() {
 
+
     axios.get("http://localhost:3000/api/products")
     .then((response)=> {
         console.log(response.data)
