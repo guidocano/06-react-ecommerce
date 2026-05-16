@@ -19,10 +19,10 @@
        8 times (instead of typing out "1fr" 8 times).
        repeat(...) is a special property that works with
        display: grid; */
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 
     /* Clave: crear espacio para el banner fijo arriba */
-    margin-top: -230px; /* Debe coincidir con la altura del .fixed-background-banner */
+    margin-top: -18%; /* Debe coincidir con la altura del .fixed-background-banner */
     /* Propiedades para el contenido */
     flex: 1; /* Ocupa el resto de la altura */
     padding: 0px;
@@ -36,7 +36,7 @@
    will divide the grid into 7 columns instead of 8. */
 @media (max-width: 2000px) {
   .home-page .products-grid {
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -44,37 +44,63 @@
    less, we will divide the grid into 6 columns. */
 @media (max-width: 1600px) {
   .home-page .products-grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
 @media (max-width: 1300px) {
   .home-page .products-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 1000px) {
   .home-page .products-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 800px) {
   .home-page .products-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
+
+    .responsive-banner {
+    width: 50px;       /* Ocupa todo el ancho disponible */
+}
 }
 
 @media (max-width: 575px) {
+  .home-page {
+    /* CLAVE: Corta cualquier elemento que intente salirse por los costados */
+    overflow-x: hidden; 
+    
+    margin-top: 60px; 
+  }
+
   .home-page .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+  }
+
+  .home-page .responsive-banner {
+    width: 200vw;         
+    height: auto;      
+    display: block;
+    position: relative;
+    margin-left: calc(50vw - 100vw); 
+    margin-bottom: -25vw; 
   }
 }
 
 @media (max-width: 450px) {
   .home-page .products-grid {
     grid-template-columns: 1fr;
+  }
+
+    .responsive-banner {
+    width: 50%;       /* Ocupa todo el ancho disponible */
+      margin: 0 auto;
   }
 }
 
@@ -83,7 +109,7 @@
   padding-bottom: 25px;
   padding-left: 25px;
   padding-right: 25px;
-  margin-right: 10px;
+  margin: 6px;
   border-right: 1px solid rgb(240, 240, 240);
   border-bottom: 1px solid rgb(240, 240, 240);
   background-color: white;
