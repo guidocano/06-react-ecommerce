@@ -19,7 +19,7 @@ export function HomePage( {cart, loadCart} ) {
 
   return (
     <>
-      <title>Ecommerce Project</title>
+      <title>Ecommerce Project 2026</title>
       <Header cart={cart}/>
       <div className="home-page">
         <ProductsGrid products={products} loadCart={loadCart}/>
