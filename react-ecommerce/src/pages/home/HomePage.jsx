@@ -22,6 +22,8 @@ export function HomePage( {cart, loadCart} ) {
       <title>Ecommerce Project</title>
       <Header cart={cart}/>
       <div className="home-page">
+        <img src="/images/amazon-publi2.jpg" alt="Banner" class="responsive-banner"></img>
+        {/* <div class="fixed-background-banner"></div> */}
         <ProductsGrid products={products} loadCart={loadCart}/>
       </div>
     </>

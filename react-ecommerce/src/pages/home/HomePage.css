@@ -1,5 +1,10 @@
 .home-page {
   margin-top: 60px;
+
+  display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #E5E7EB;
 }
 
 .home-page .products-grid {
@@ -15,6 +20,14 @@
        repeat(...) is a special property that works with
        display: grid; */
   grid-template-columns: repeat(8, 1fr);
+
+    /* Clave: crear espacio para el banner fijo arriba */
+    margin-top: -230px; /* Debe coincidir con la altura del .fixed-background-banner */
+    /* Propiedades para el contenido */
+    flex: 1; /* Ocupa el resto de la altura */
+    padding: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* @media is used to create responsive design (making the
@@ -70,10 +83,10 @@
   padding-bottom: 25px;
   padding-left: 25px;
   padding-right: 25px;
-
+  margin-right: 10px;
   border-right: 1px solid rgb(240, 240, 240);
   border-bottom: 1px solid rgb(240, 240, 240);
-
+  background-color: white;
   display: flex;
   flex-direction: column;
 }
@@ -154,4 +167,28 @@
   padding: 8px;
   height: 34px;
   margin-top: 1px;
+}
+
+/* .fixed-background-banner {
+    position: relative;
+    top: 0;
+    left: 0;
+    
+
+    width: 100vw;
+    height: 500px; 
+    
+
+    background-image: url('/images/amazon-publi.jpg'); 
+    background-size: contain; 
+    background-position: center top; 
+    background-repeat: no-repeat;
+    
+    z-index: -1;
+} */
+
+.responsive-banner {
+    width: 100%;       /* Ocupa todo el ancho disponible */
+    height: auto;      /* Mantiene la proporción exacta y muestra todo el alto sin recortar */
+    display: block;    /* Elimina el espacio en blanco inferior por defecto de las imágenes */
 }

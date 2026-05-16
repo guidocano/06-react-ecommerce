@@ -66,7 +66,7 @@ export function OrdersPage({ cart }) {
                               src="images/icons/buy-again.png"
                             />
                             <span className="buy-again-message">
-                              Add to Cart
+                              Buy again
                             </span>
                           </button>
                         </div>
