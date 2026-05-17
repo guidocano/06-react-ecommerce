@@ -29,12 +29,13 @@ export function CheckoutPage({ cart, loadCart }) {
       <Header cart={cart} />
 
       <div className="checkout-page">
-        <div className="page-title">Review your order</div>
+        <div className="page-title">Checkout Summary</div>
 
         <div className="checkout-grid">
+
           <OrderSummary cart={cart} loadCart={loadCart} deliveryOptions={deliveryOptions}/>
 
-        <PaymentSummary paymentSummary={paymentSummary} loadCart={loadCart}/>
+          <PaymentSummary paymentSummary={paymentSummary} loadCart={loadCart}/>
         </div>
       </div>
     </>

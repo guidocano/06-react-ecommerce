@@ -19,7 +19,7 @@ export function HomePage( {cart, loadCart} ) {
 
   return (
     <>
-      <title>Ecommerce Project</title>
+      <title>Amockzon.com. Spend less. Enjoy more.</title>
       <Header cart={cart}/>
       <div className="home-page">
         <img src="/images/amazon-publi2.jpg" alt="Banner" class="responsive-banner"></img>

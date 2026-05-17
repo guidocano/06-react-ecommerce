@@ -6,7 +6,12 @@ import { DeliveryOptions } from "./DeliveryOptions";
 export function OrderSummary({cart, deliveryOptions, loadCart}) {
   return (
     <div className="order-summary">
-      {deliveryOptions.length > 0 &&
+
+      {cart.length === 0 ? (
+        <div className="cart-empty-message">Your cart is empty.</div>
+      ) : (
+      
+      deliveryOptions.length > 0 &&
         cart.map((cartItem) => {
           const selectedDeliveryOption = deliveryOptions.find(
             (deliveryOption) => {
@@ -56,7 +61,8 @@ export function OrderSummary({cart, deliveryOptions, loadCart}) {
               </div>
             </div>
           );
-        })}
+        })
+      )}
     </div>
   );
 }
